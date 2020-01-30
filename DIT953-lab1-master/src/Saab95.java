@@ -1,11 +1,13 @@
 import java.awt.*;
 
 /**
- * Represents a Saab95
+ * Represents a Saab 9-5
+ * @author Yu Shin Hua
+ * @author Marja Rolandsson
+ * @author Simon Genne
  */
-
 public class Saab95 extends car{
-    public boolean turboOn;
+    private boolean turboOn;
 
     /**
      * Constructor for Saab95 objects.
@@ -35,7 +37,7 @@ public class Saab95 extends car{
     public double speedFactor(){
         double turbo = 1;
         if(turboOn) turbo = 1.3;
-        return enginePower * 0.01 * turbo;
+        return speedFactor(turbo);
     }
 
     /**
@@ -43,7 +45,8 @@ public class Saab95 extends car{
      * @param amount specifies the amount with which to increase the speed.
      */
     public void incrementSpeed(double amount){
-        currentSpeed = getCurrentSpeed() + speedFactor() * amount;
+    double newSpeed = calculateSpeed(speedFactor(), amount);
+    setCurrentSpeed(newSpeed);
     }
 
     /**
@@ -51,7 +54,8 @@ public class Saab95 extends car{
      * @param amount specifies the amount with which to decrease the speed.
      */
     public void decrementSpeed(double amount){
-        currentSpeed = getCurrentSpeed() - speedFactor() * amount;
+        double newSpeed = calculateSpeed(speedFactor(), -amount);
+        setCurrentSpeed(newSpeed);
     }
     
     // TODO fix this method according to lab pm

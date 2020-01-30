@@ -1,11 +1,13 @@
 import java.awt.*;
 
 /**
- * represents a Volvo240
+ * Represents a Volvo 240
+ * @author Yu Shin Hua
+ * @author Marja Rolandsson
+ * @author Simon Genne
  */
-
 public class Volvo240 extends car{
-    public final static double trimFactor = 1.25;
+    private final static double trimFactor = 1.25;
 
     /**
      * Constructor of Volvo240 objects.
@@ -18,7 +20,7 @@ public class Volvo240 extends car{
      * @return the current speed factor of the car.
      */
     public double speedFactor(){
-        return enginePower * 0.01 * trimFactor;
+        return speedFactor(trimFactor);
     }
 
     /**
@@ -26,7 +28,9 @@ public class Volvo240 extends car{
      * @param amount specifies the amount with which to increase the speed.
      */
     public void incrementSpeed(double amount){
-	    currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
+        double newSpeed = calculateSpeed(speedFactor(), amount);
+	    newSpeed = Math.min(newSpeed, getEnginePower());
+        setCurrentSpeed(newSpeed);
     }
 
     /**
@@ -34,7 +38,9 @@ public class Volvo240 extends car{
      * @param amount specifies the amount with which to decrease the speed.
      */
     public void decrementSpeed(double amount){
-        currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
+        double newSpeed = calculateSpeed(speedFactor(), -amount);
+        newSpeed = Math.max(newSpeed,0);
+        setCurrentSpeed(newSpeed);
     }
 
     // TODO fix this method according to lab pm

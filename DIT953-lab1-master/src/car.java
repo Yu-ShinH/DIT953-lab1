@@ -2,18 +2,21 @@ import java.awt.*;
 
 /**
  * Represents a car
- *
- */
+ * @author Yu Shin Hua
+ * @author Marja Rolandsson
+ * @author Simon Genne
+  */
 public abstract class car implements Movable{
 
-    public int nrDoors; // Number of doors on the car
-    public double enginePower; // Engine power of the car
-    public double currentSpeed; // The current speed of the car
-    public Color color; // Color of the car
-    public String modelName; // The car model name
-    public double x = 0;
-    public double y = 0;
-    public double direction = 0;
+    private int nrDoors; // Number of doors on the car
+    private double enginePower; // Engine power of the car
+    private double currentSpeed; // The current speed of the car
+    private Color color; // Color of the car
+    private String modelName; // The car model name
+    private double x = 0;
+    private double y = 0;
+    private double direction = 0;
+    private double turnAngle = 45;
 
     /**
      * Constructor for subclasses of car.
@@ -37,15 +40,15 @@ public abstract class car implements Movable{
     public void move() {
         double dx = Math.cos(getDirection())*getCurrentSpeed();
         double dy = Math.sin(getDirection())*getCurrentSpeed();
-        setX(getX() + dx);
-        setY(getY() + dy);
+        x = getX() + dx;
+        y = getY() + dy;
     }
 
     /**
      * Changes the direction of the car by 45 degrees in the positive direction.
      */
     public void turnLeft() {
-        setDirection(getDirection() + 45);
+        setDirection(getDirection() + turnAngle);
         if(getDirection() >= 360)
         {
             setDirection(0) ;
@@ -56,7 +59,7 @@ public abstract class car implements Movable{
      * Changes the direction of the car by 45 degrees in the negative direction.
      */
     public void turnRight() {
-        setDirection(getDirection() - 45);
+        setDirection(getDirection() - turnAngle);
         if(getDirection() <= -360)
         {
             setDirection(0) ;
@@ -68,7 +71,7 @@ public abstract class car implements Movable{
      * @param direction specifies the direction.
      */
     public void setDirection(double direction){
-        this.direction = direction;
+        this.direction = direction % 360;
     }
 
     /**
@@ -131,6 +134,10 @@ public abstract class car implements Movable{
         return currentSpeed;
     }
 
+    /**
+     * Changes the current speed of the car.
+     * @param speed specifies the new speed.
+     */
     public void setCurrentSpeed(double speed) {
         this.currentSpeed = speed;
     }
@@ -162,5 +169,23 @@ public abstract class car implements Movable{
      */
     public void stopEngine(){
         currentSpeed = 0;
+    }
+
+    /**
+     * @param factor individual factor from sub classes.
+     * @return the current speed factor of the car.
+     */
+    public double speedFactor(double factor) {
+        return enginePower * 0.01 * factor;
+    }
+
+    /**
+     * Calculates the new speed of the car given a speed factor and an amount.
+     * @param factor speed factor.
+     * @param amount amount to change the speed with.
+     * @return calculated new speed
+     */
+    public double calculateSpeed(double factor, double amount) {
+        return currentSpeed + factor * amount;
     }
 }
