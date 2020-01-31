@@ -71,7 +71,7 @@ public abstract class car implements Movable{
      * @param direction specifies the direction.
      */
     public void setDirection(double direction){
-        this.direction = direction % 2*Math.PI;
+        this.direction = direction;
     }
 
     /**
@@ -80,22 +80,6 @@ public abstract class car implements Movable{
     public double getDirection()
     {
         return direction;
-    }
-
-    /**
-     * Changes the x-coordinate of the car.
-     * @param x specifies the x-coordinate.
-     */
-    public void setX(double x){
-        this.x = x;
-    }
-
-    /**
-     * Changes the y-coordinate of the car.
-     * @param y specifies the y-coordinate.
-     */
-    public void setY(double y){
-        this.y = y;
     }
 
     /**
@@ -183,7 +167,7 @@ public abstract class car implements Movable{
      * @param factor speed factor of car.
      * @param amount amount to increase speed with.
      */
-    public void incrementSpeed(double factor, double amount) {
+    private void incrementSpeed(double factor, double amount) {
         double newSpeed = currentSpeed + factor * amount;
         newSpeed = Math.min(newSpeed, enginePower);
         setCurrentSpeed(newSpeed);
@@ -192,12 +176,33 @@ public abstract class car implements Movable{
     /**
      * Decrements the speed of the car.
      * @param factor speed factor of car.
-     * @param amount
+     * @param amount amount to decrease speed with.
      */
-    public void decrementSpeed(double factor, double amount){
+    private void decrementSpeed(double factor, double amount){
         double newSpeed = currentSpeed + factor * -amount;
         newSpeed = Math.max(newSpeed, 0);
         setCurrentSpeed(newSpeed);
+    }
+
+    /**
+     * Accelerates car.
+     * @param factor speed factor.
+     * @param amount amount to increase speed with.
+     */
+    public void gas(double factor, double amount) {
+        if(!(amount < 0) && !(amount > 1)) {
+            incrementSpeed(factor, amount);
+        }
+    }
+    /**
+     * Deaccelerates car
+     * @param factor speed factor.
+     * @param amount amount to decrease speed with.
+     */
+    public void brake(double factor, double amount) {
+        if (!(amount < 0) && !(amount > 1)) {
+            decrementSpeed(factor, amount);
+        }
     }
 
     public abstract void gas(double amount);

@@ -23,13 +23,11 @@ public class Volvo240 extends car{
         return speedFactor(trimFactor);
     }
 
-    // TODO fix this method according to lab pm
     public void gas(double amount){
-        incrementSpeed(speedFactor(), amount);
+        gas(speedFactor(), amount);
     }
 
-    // TODO fix this method according to lab pm
     public void brake(double amount){
-        decrementSpeed(speedFactor(), amount);
+        brake(speedFactor(), amount);
     }
 }

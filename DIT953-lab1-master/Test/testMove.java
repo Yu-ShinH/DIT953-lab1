@@ -8,11 +8,16 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+/**
+ * Tests for move-method.
+ */
 public class testMove {
-    List<car> cars = new ArrayList<>();
+    List<car> cars;
 
     @Before
     public void init() {
+        cars = new ArrayList<>();
+
         car v = new Volvo240();
         car s = new Saab95();
 
@@ -61,15 +66,5 @@ public class testMove {
             }
         }
         assertTrue(atStart);
-    }
-
-    @After
-    public void reset() {
-        for (car c : cars) {
-            c.setX(0);
-            c.setY(0);
-            c.stopEngine();
-            c.gas(10);
-        }
     }
 }

@@ -39,14 +39,16 @@ public class Saab95 extends car{
         if(turboOn) turbo = 1.3;
         return speedFactor(turbo);
     }
-    
-    // TODO fix this method according to lab pm
+
+    /**
+     *
+     * @param amount
+     */
     public void gas(double amount){
-        incrementSpeed(speedFactor(), amount);
+        gas(speedFactor(), amount);
     }
 
-    // TODO fix this method according to lab pm
     public void brake(double amount){
-        decrementSpeed(speedFactor(), amount);
+        brake(speedFactor(), amount);
     }
 }
