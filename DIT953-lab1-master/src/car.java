@@ -16,7 +16,7 @@ public abstract class car implements Movable{
     private double x = 0;
     private double y = 0;
     private double direction = 0;
-    private double turnAngle = 45;
+    private double turnAngle = Math.PI/4;
 
     /**
      * Constructor for subclasses of car.
@@ -49,7 +49,7 @@ public abstract class car implements Movable{
      */
     public void turnLeft() {
         setDirection(getDirection() + turnAngle);
-        if(getDirection() >= 360)
+        if(getDirection() >= 2 * Math.PI)
         {
             setDirection(0) ;
         }
@@ -60,7 +60,7 @@ public abstract class car implements Movable{
      */
     public void turnRight() {
         setDirection(getDirection() - turnAngle);
-        if(getDirection() <= -360)
+        if(getDirection() <= -2 * Math.PI)
         {
             setDirection(0) ;
         }
@@ -71,7 +71,7 @@ public abstract class car implements Movable{
      * @param direction specifies the direction.
      */
     public void setDirection(double direction){
-        this.direction = direction % 360;
+        this.direction = direction % 2*Math.PI;
     }
 
     /**
@@ -120,7 +120,6 @@ public abstract class car implements Movable{
     }
 
     /**
-     *
      * @return the cars enginge power.
      */
     public double getEnginePower(){
@@ -138,7 +137,7 @@ public abstract class car implements Movable{
      * Changes the current speed of the car.
      * @param speed specifies the new speed.
      */
-    public void setCurrentSpeed(double speed) {
+    private void setCurrentSpeed(double speed) {
         this.currentSpeed = speed;
     }
 
@@ -180,12 +179,27 @@ public abstract class car implements Movable{
     }
 
     /**
-     * Calculates the new speed of the car given a speed factor and an amount.
-     * @param factor speed factor.
-     * @param amount amount to change the speed with.
-     * @return calculated new speed
+     * Increments the speed of the car.
+     * @param factor speed factor of car.
+     * @param amount amount to increase speed with.
      */
-    public double calculateSpeed(double factor, double amount) {
-        return currentSpeed + factor * amount;
+    public void incrementSpeed(double factor, double amount) {
+        double newSpeed = currentSpeed + factor * amount;
+        newSpeed = Math.min(newSpeed, enginePower);
+        setCurrentSpeed(newSpeed);
     }
+
+    /**
+     * Decrements the speed of the car.
+     * @param factor speed factor of car.
+     * @param amount
+     */
+    public void decrementSpeed(double factor, double amount){
+        double newSpeed = currentSpeed + factor * -amount;
+        newSpeed = Math.max(newSpeed, 0);
+        setCurrentSpeed(newSpeed);
+    }
+
+    public abstract void gas(double amount);
+    public abstract void brake(double amount);
 }

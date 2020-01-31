@@ -39,32 +39,14 @@ public class Saab95 extends car{
         if(turboOn) turbo = 1.3;
         return speedFactor(turbo);
     }
-
-    /**
-     * Increases the speed of the car by a given amount.
-     * @param amount specifies the amount with which to increase the speed.
-     */
-    public void incrementSpeed(double amount){
-    double newSpeed = calculateSpeed(speedFactor(), amount);
-    setCurrentSpeed(newSpeed);
-    }
-
-    /**
-     * Decreases the speed of the car by a given amount.
-     * @param amount specifies the amount with which to decrease the speed.
-     */
-    public void decrementSpeed(double amount){
-        double newSpeed = calculateSpeed(speedFactor(), -amount);
-        setCurrentSpeed(newSpeed);
-    }
     
     // TODO fix this method according to lab pm
     public void gas(double amount){
-        incrementSpeed(amount);
+        incrementSpeed(speedFactor(), amount);
     }
 
     // TODO fix this method according to lab pm
     public void brake(double amount){
-        decrementSpeed(amount);
+        decrementSpeed(speedFactor(), amount);
     }
 }
