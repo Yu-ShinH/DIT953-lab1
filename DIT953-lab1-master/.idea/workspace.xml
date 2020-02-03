@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/user.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/testBreak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/testGas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/testTurn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volvo240.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/car.java" afterDir="false" />
-    </list>
+    <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,9 +136,9 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DIT953_lab1_master$testMove.ic" NAME="testMove Coverage Results" MODIFIED="1580482478866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$All_in_DIT953_lab1_master.ic" NAME="All in DIT953-lab1-master Coverage Results" MODIFIED="1580484319986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testGas.ic" NAME="testGas Coverage Results" MODIFIED="1580483855545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testMove_testMoveCircle.ic" NAME="testMove.testMoveCircle Coverage Results" MODIFIED="1580414747872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DIT953_lab1_master$testMove.ic" NAME="testMove Coverage Results" MODIFIED="1580482478866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
