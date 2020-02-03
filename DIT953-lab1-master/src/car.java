@@ -17,6 +17,7 @@ public abstract class car implements Movable{
     private double y = 0;
     private double direction = 0;
     private double turnAngle = Math.PI/4;
+    private double weight;
 
     /**
      * Constructor for subclasses of car.
@@ -96,6 +97,12 @@ public abstract class car implements Movable{
         return  y;
     }
 
+    public void setX(double x){
+        this.x = x;
+    }
+    public void setY(double y){
+        this.y = y;
+    }
     /**
      * @return the number of doors on the car.
      */
@@ -147,6 +154,9 @@ public abstract class car implements Movable{
         currentSpeed = 0.1;
     }
 
+    public double getWeigth(){
+        return weight;
+    }
     /**
      * Sets the speed of the car to 0.
      */
@@ -203,6 +213,18 @@ public abstract class car implements Movable{
         if (!(amount < 0) && !(amount > 1)) {
             decrementSpeed(factor, amount);
         }
+    }
+    public double distanceFrom(car c)
+    {
+        double x1 = getX();
+        double y1 = getY();
+        double x2 = c.getX();
+        double y2 = c.getY();
+
+        double deltaX = x2 - x2;
+        double deltaY = y2 - y1;
+        double distance = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
+        return distance;
     }
 
     public abstract void gas(double amount);
