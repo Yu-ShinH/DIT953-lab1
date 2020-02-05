@@ -50,14 +50,15 @@ public class Truck extends car{
      * Unloads a single car from the truck.
      * Can only be done if the ramp is lowered.
      */
-    public void unLoad(){
+    public car unLoad(){
         if(!rampIsUp)
         {
             car c = cars.pop();
             c.setX(getX()+1);
             c.setY(getY()+1);
+            return c;
         }
-
+        return null;
     }
 
     /**
@@ -98,11 +99,11 @@ public class Truck extends car{
      */
     @Override
     public void gas(double amount) {
-        if(!rampIsUp) {
+        if(rampIsUp) {
             super.gas(1);
         }
         else {
-            System.out.println("Cannot increase speed while ramp is up.");
+            System.out.println("Cannot increase speed while ramp is down.");
         }
     }
 

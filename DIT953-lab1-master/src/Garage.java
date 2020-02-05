@@ -10,7 +10,7 @@ import java.util.List;
 public class Garage <C extends car>{
     private int maxCars;
 
-    List<C> cars = new ArrayList<C>();
+    private List<C> cars = new ArrayList<C>();
 
     /**
      * Constructor for Garage objects.
@@ -28,5 +28,9 @@ public class Garage <C extends car>{
        if(cars.size()<maxCars){
            cars.add(c);
        }
+    }
+
+    public int nCars() {
+        return cars.size();
     }
 }
