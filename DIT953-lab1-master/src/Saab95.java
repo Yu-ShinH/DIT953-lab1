@@ -1,7 +1,7 @@
 import java.awt.*;
 
 /**
- * Represents a Saab 9-5
+ * Represents a Saab 9-5.
  * @author Yu Shin Hua
  * @author Marja Rolandsson
  * @author Simon Genne
@@ -13,7 +13,7 @@ public class Saab95 extends car{
      * Constructor for Saab95 objects.
      */
     public Saab95() {
-        super(2,Color.red,125,"Saab95");
+        super(2,Color.red,125,"Saab95", 1000);
         turboOn = false;
     }
 
@@ -44,10 +44,12 @@ public class Saab95 extends car{
      *
      * @param amount
      */
+    @Override
     public void gas(double amount){
         gas(speedFactor(), amount);
     }
 
+    @Override
     public void brake(double amount){
         brake(speedFactor(), amount);
     }

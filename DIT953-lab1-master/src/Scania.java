@@ -1,7 +1,7 @@
 import java.awt.*;
 
 /**
- * Represents a Scania
+ * Represents a Scania.
  * @author Yu Shin Hua
  * @author Marja Rolandsson
  * @author Simon Genne
@@ -12,16 +12,21 @@ public class Scania extends car{
      * Constructor of Scania objects.
      */
     public Scania() {
-        super(2,Color.red,100, "Scania");
+        super(2,Color.red,100, "Scania", 15000);
     }
 
-    public void raise(double amount){
+    /**
+     * Raises flatbed with a certain angle.
+     * The flatbed cannot be above 70 degrees.
+     * @param angle specifies the angle with which to raise the flatbed.
+     */
+    public void raise(double angle){
         if(getCurrentSpeed()!=0)
         {
             System.out.println("Cannot raise flatbed while moving");
             return;
         }
-        flatbed += amount;
+        flatbed += angle;
         if(flatbed>70)
         {
             flatbed = 70;
@@ -29,8 +34,13 @@ public class Scania extends car{
         }
     }
 
-    public void lower(double amount){
-        flatbed -= amount;
+    /**
+     * Lowers the flatbed with a certain angle.
+     * The flatbed cannot be lower than 0 degrees.
+     * @param angle specifies the angle with which to lower the flatbed.
+     */
+    public void lower(double angle){
+        flatbed -= angle;
         if(flatbed<0)
         {
             flatbed = 0;
@@ -38,25 +48,26 @@ public class Scania extends car{
         }
     }
 
+    /**
+     * @return the current angle of the flatbed.
+     */
     public double getAngle(){
         return flatbed;
     }
-    @Override
-    public void move(){
-        if(getAngle()!=0){
-            System.out.println("Cannot move while flatbed is raised");
-            return;
-        }
-        super.move();
-    }
+
+    /**
+     * Increases the speed by a given amount.
+     * Speed can only be increased if flatbed is lowered completely.
+     * @param amount specifies the amount with which to increase speed.
+     */
     @Override
     public void gas(double amount) {
-        gas(1,amount);
-
+        if (flatbed == 0) {
+            super.gas(1);
+        }
+        else {
+            System.out.println("Cannot increase speed while flatbed is raised.");
+        }
     }
 
-    @Override
-    public void brake(double amount) {
-        brake(1,amount);
-    }
 }

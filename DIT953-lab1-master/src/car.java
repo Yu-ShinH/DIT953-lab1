@@ -1,7 +1,7 @@
 import java.awt.*;
 
 /**
- * Represents a car
+ * Represents a car.
  * @author Yu Shin Hua
  * @author Marja Rolandsson
  * @author Simon Genne
@@ -26,13 +26,14 @@ public abstract class car implements Movable{
      * @param enginePower specifies the engine power of the car.
      * @param modelName specifies the model name of the car.
      */
-    public car(int nrDoors, Color color, double enginePower, String modelName) {
+    public car(int nrDoors, Color color, double enginePower, String modelName, double weight) {
         this.nrDoors = nrDoors;
         this.enginePower = enginePower;
         this.currentSpeed = currentSpeed;
         this.color = color;
         this.modelName = modelName;
         stopEngine();
+        this.weight = weight;
     }
 
     /**
@@ -195,6 +196,42 @@ public abstract class car implements Movable{
     }
 
     /**
+     * Calculates the distance from a given car.
+     * @param c the car to calculate distance from.
+     * @return the distance between the given car and the caller.
+     */
+    public double distanceFrom(car c) {
+        double x1 = getX();
+        double y1 = getY();
+        double x2 = c.getX();
+        double y2 = c.getY();
+
+        double deltaX = x2 - x2;
+        double deltaY = y2 - y1;
+        double distance = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
+        return distance;
+    }
+
+    /**
+     * Increases speed of the car.
+     * Used in classes without a speedFactor method.
+     * @param amount specifies the amount with which to increase speed.
+     */
+    public void gas(double amount) {
+        gas(1,amount);
+
+    }
+
+    /**
+     * Decrease the speed of the car.
+     * Used in classes without a speedFactor method.
+     * @param amount specifies the amount with which to decrease the speed.
+     */
+    public void brake(double amount) {
+        brake(1,amount);
+    }
+
+    /**
      * Accelerates car.
      * @param factor speed factor.
      * @param amount amount to increase speed with.
@@ -214,19 +251,4 @@ public abstract class car implements Movable{
             decrementSpeed(factor, amount);
         }
     }
-    public double distanceFrom(car c)
-    {
-        double x1 = getX();
-        double y1 = getY();
-        double x2 = c.getX();
-        double y2 = c.getY();
-
-        double deltaX = x2 - x2;
-        double deltaY = y2 - y1;
-        double distance = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
-        return distance;
-    }
-
-    public abstract void gas(double amount);
-    public abstract void brake(double amount);
 }
