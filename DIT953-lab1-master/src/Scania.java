@@ -6,7 +6,7 @@ import java.awt.*;
  * @author Marja Rolandsson
  * @author Simon Genne
  */
-public class Scania extends car{
+public class Scania extends car {
     private double flatbed = 0;
     /**
      * Constructor of Scania objects.

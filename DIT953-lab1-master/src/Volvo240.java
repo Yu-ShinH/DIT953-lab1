@@ -6,7 +6,7 @@ import java.awt.*;
  * @author Marja Rolandsson
  * @author Simon Genne
  */
-public class Volvo240 extends car{
+public class Volvo240 extends car implements ITruckTransportable{
     private final static double trimFactor = 1.25;
 
     /**

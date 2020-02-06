@@ -1,69 +1,67 @@
 import java.util.List;
 
-public class Transporter<T> {
-    private double currentSpeed;
-    private double x = 0;
-    private double y = 0;
-    private double direction = 0;
-    private double turnAngle = Math.PI/4;
-    private double weight;
+/**
+ * Dependency class used by classes that are transporters. An interface extending Movable has to be created for every
+ * class depending on Transporter.
+ * @param <T> the interface implemented by classes that can be transported by the dependent class (has to extend Movable).
+ * @author Yu Shin Hua
+ * @author Marja Rolandsson
+ * @author Simon Genne
+ */
+public class Transporter<T extends Movable> {
+    private List<T> storage;
+    private int max;
 
-    private List<T> load;
+    private Mover mover;
 
-    public Transporter(double currentSpeed, double x, double y, double weight, List<T> load) {
-        this.currentSpeed = currentSpeed;
-        this.x = x;
-        this.y = y;
-        this.weight = weight;
-        this.load = load;
+    /**
+     * Constructor for Transporter objects.
+     * @param storage a List used for storing the given objects.
+     * @param max the max amount of objects that can be stored.
+     * @param mover the same Mover object used by dependent class.
+     */
+    public Transporter(List<T> storage, int max, Mover mover) {
+        this.storage = storage;
+        this.max = max;
+        this.mover = mover;
     }
 
+    /**
+     * Stores an object if the maximum capacity has not been reached.
+     * @param t the object to be stored.
+     */
+    public void load(T t) {
+        if (storage.size() < max) {
+            storage.add(t);
+        }
+        else {
+            System.out.println("Maximum storage capacity has been reached.");
+        }
+    }
+
+    /**
+     * @return one object storage.
+     */
+    public T unload() {
+            return storage.remove(0);
+    }
+
+    /**
+     * @return the number of objects currently being stored.
+     */
+    public int getN() {
+        return storage.size();
+    }
+
+    /**
+     * Changes the xy-coordinates of the dependent object and all stored objects.
+     */
     public void move() {
-        double dx = Math.cos(getDirection())*getCurrentSpeed();
-        double dy = Math.sin(getDirection())*getCurrentSpeed();
-        x = getX() + dx;
-        y = getY() + dy;
-    }
+        mover.move();
 
-    public void turnLeft() {
-        setDirection(getDirection() + turnAngle);
-        if(getDirection() >= -2 * Math.PI)
-        {
-            setDirection(0) ;
+        for (Movable m : storage) {
+            m.setX(mover.getX());
+            m.setY(mover.getY());
         }
     }
-
-    public void turnRight() {
-        setDirection(getDirection() - turnAngle);
-        if(getDirection() <= -2 * Math.PI)
-        {
-            setDirection(0) ;
-        }
-    }
-
-    private void setDirection(double direction) {
-        this.direction = direction;
-    }
-
-    public double getDirection() {
-        return direction;
-    }
-
-    public double getCurrentSpeed() {
-        return currentSpeed;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    private void setCurrentSpeed(double currentSpeed) {
-        this.currentSpeed = currentSpeed;
-    }
-
-
 }

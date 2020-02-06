@@ -6,18 +6,15 @@ import java.awt.*;
  * @author Marja Rolandsson
  * @author Simon Genne
   */
-public abstract class car implements Movable{
+public abstract class car implements Movable, IFerryTransportable {
 
     private int nrDoors; // Number of doors on the car
     private double enginePower; // Engine power of the car
-    private double currentSpeed; // The current speed of the car
     private Color color; // Color of the car
     private String modelName; // The car model name
-    private double x = 0;
-    private double y = 0;
-    private double direction = 0;
-    private double turnAngle = Math.PI/4;
     private double weight;
+
+    private Mover mover = new Mover();
 
     /**
      * Constructor for subclasses of car.
@@ -29,7 +26,6 @@ public abstract class car implements Movable{
     public car(int nrDoors, Color color, double enginePower, String modelName, double weight) {
         this.nrDoors = nrDoors;
         this.enginePower = enginePower;
-        this.currentSpeed = currentSpeed;
         this.color = color;
         this.modelName = modelName;
         stopEngine();
@@ -40,32 +36,21 @@ public abstract class car implements Movable{
      * Changes the position of the car.
      */
     public void move() {
-        double dx = Math.cos(getDirection())*getCurrentSpeed();
-        double dy = Math.sin(getDirection())*getCurrentSpeed();
-        x = getX() + dx;
-        y = getY() + dy;
+        mover.move();
     }
 
     /**
      * Changes the direction of the car by 45 degrees in the positive direction.
      */
     public void turnLeft() {
-        setDirection(getDirection() + turnAngle);
-        if(getDirection() >= 2 * Math.PI)
-        {
-            setDirection(0) ;
-        }
+        mover.turnLeft();
     }
 
     /**
      * Changes the direction of the car by 45 degrees in the negative direction.
      */
     public void turnRight() {
-        setDirection(getDirection() - turnAngle);
-        if(getDirection() <= -2 * Math.PI)
-        {
-            setDirection(0) ;
-        }
+        mover.turnRight();
     }
 
     /**
@@ -73,7 +58,7 @@ public abstract class car implements Movable{
      * @param direction specifies the direction.
      */
     public void setDirection(double direction){
-        this.direction = direction;
+        mover.setDirection(direction);
     }
 
     /**
@@ -81,28 +66,28 @@ public abstract class car implements Movable{
      */
     public double getDirection()
     {
-        return direction;
+        return mover.getDirection();
     }
 
     /**
      * @return the current x-coordinate of the car.
      */
     public double getX(){
-        return x;
+        return mover.getX();
     }
 
     /**
      * @return the current y-coordinate of the car.
      */
     public  double getY(){
-        return  y;
+        return  mover.getY();
     }
 
     public void setX(double x){
-        this.x = x;
+        mover.setX(x);
     }
     public void setY(double y){
-        this.y = y;
+        mover.setY(y);
     }
     /**
      * @return the number of doors on the car.
@@ -122,7 +107,7 @@ public abstract class car implements Movable{
      * @return the current speed of the car.
      */
     public double getCurrentSpeed(){
-        return currentSpeed;
+        return mover.getCurrentSpeed();
     }
 
     /**
@@ -130,7 +115,7 @@ public abstract class car implements Movable{
      * @param speed specifies the new speed.
      */
     private void setCurrentSpeed(double speed) {
-        this.currentSpeed = speed;
+        mover.setCurrentSpeed(speed);
     }
 
     /**
@@ -152,7 +137,7 @@ public abstract class car implements Movable{
      * Sets the current speed of the car to 0.1.
      */
     public void startEngine(){
-        currentSpeed = 0.1;
+        mover.setCurrentSpeed(0.1);
     }
 
     public double getWeigth(){
@@ -162,7 +147,7 @@ public abstract class car implements Movable{
      * Sets the speed of the car to 0.
      */
     public void stopEngine(){
-        currentSpeed = 0;
+        mover.setCurrentSpeed(0);
     }
 
     /**
@@ -179,7 +164,7 @@ public abstract class car implements Movable{
      * @param amount amount to increase speed with.
      */
     private void incrementSpeed(double factor, double amount) {
-        double newSpeed = currentSpeed + factor * amount;
+        double newSpeed = mover.getCurrentSpeed() + factor * amount;
         newSpeed = Math.min(newSpeed, enginePower);
         setCurrentSpeed(newSpeed);
     }
@@ -190,21 +175,21 @@ public abstract class car implements Movable{
      * @param amount amount to decrease speed with.
      */
     private void decrementSpeed(double factor, double amount){
-        double newSpeed = currentSpeed + factor * -amount;
+        double newSpeed = mover.getCurrentSpeed() + factor * -amount;
         newSpeed = Math.max(newSpeed, 0);
         setCurrentSpeed(newSpeed);
     }
 
     /**
      * Calculates the distance from a given car.
-     * @param c the car to calculate distance from.
+     * @param m the object to calculate distance to.
      * @return the distance between the given car and the caller.
      */
-    public double distanceFrom(car c) {
+    public double distanceFrom(Movable m) {
         double x1 = getX();
         double y1 = getY();
-        double x2 = c.getX();
-        double y2 = c.getY();
+        double x2 = m.getX();
+        double y2 = m.getY();
 
         double deltaX = x2 - x2;
         double deltaY = y2 - y1;
@@ -219,7 +204,6 @@ public abstract class car implements Movable{
      */
     public void gas(double amount) {
         gas(1,amount);
-
     }
 
     /**
@@ -250,5 +234,9 @@ public abstract class car implements Movable{
         if (!(amount < 0) && !(amount > 1)) {
             decrementSpeed(factor, amount);
         }
+    }
+
+    public Mover getMover() {
+        return mover;
     }
 }

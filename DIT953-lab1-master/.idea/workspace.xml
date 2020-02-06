@@ -2,18 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test/testGasScania.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/testLoad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/testMax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ferry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Transporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IFerryTransportable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ITruckTransportable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testLoad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Movable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Movable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Garage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Garage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMax.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMax.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ferry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ferry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scania.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/car.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.testMax.testMax">
+  <component name="RunManager" selected="JUnit.All in DIT953-lab1-master">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="DIT953-lab1-master" />
@@ -113,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in DIT953-lab1-master" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.testMax.testMax" />
         <item itemvalue="JUnit.testLoad.testPosition" />
-        <item itemvalue="JUnit.All in DIT953-lab1-master" />
         <item itemvalue="JUnit.testGasScania.GasWRaisedFlatBed" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

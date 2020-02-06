@@ -8,14 +8,18 @@ import java.util.Stack;
  * @author Simon Genne
  */
 public class Truck extends car{
-    boolean rampIsUp = true;
-    private Stack<car> cars = new Stack<car>();
+    private boolean rampIsUp = true;
+    private Transporter<ITruckTransportable> transporter;
+    private double maxWeight;
+
 
     /**
      * Constructor for Truck objects.
      */
-    public Truck() {
+    public Truck(int maxCapacity, double maxWeight) {
         super(2, Color.red,100, "Truck", 15000);
+        transporter = new Transporter<>(new Stack<ITruckTransportable>(), maxCapacity, getMover());
+        this.maxWeight = maxWeight;
     }
 
     /**
@@ -28,7 +32,7 @@ public class Truck extends car{
     public void load(car c){
         if(isLoadable(c))
         {
-            cars.push(c);
+            transporter.load( (ITruckTransportable) c);
         }
     }
 
@@ -38,8 +42,9 @@ public class Truck extends car{
      * @return true if the car can be loaded, else false.
      */
     private boolean isLoadable(car c) {
-        if (c.getWeigth() > 1500) return false;
-        if (cars.size() > 10) return false;
+        if (!(c instanceof ITruckTransportable)) return false;
+        if (c.getWeigth() > maxWeight) return false;
+        if (transporter.getN() > 10) return false;
         if (rampIsUp) return false;
         if (distanceFrom(c) > 2) return false;
         if (c == this) return false;
@@ -48,12 +53,12 @@ public class Truck extends car{
 
     /**
      * Unloads a single car from the truck.
-     * Can only be done if the ramp is lowered.
+     * Can only be done if the ramp is lowered and the truck is not already empty.
      */
     public car unLoad(){
-        if(!rampIsUp)
+        if(!rampIsUp && transporter.getN() > 0)
         {
-            car c = cars.pop();
+            car c = (car) transporter.unload();
             c.setX(getX()+1);
             c.setY(getY()+1);
             return c;
@@ -84,13 +89,7 @@ public class Truck extends car{
      */
     @Override
     public void move() {
-        super.move();
-        double newX = getX();
-        double newY = getY();
-        for (car c :cars){
-            c.setX(newX);
-            c.setY(newY);
-        }
+        transporter.move();
     }
 
     /**
@@ -100,7 +99,7 @@ public class Truck extends car{
     @Override
     public void gas(double amount) {
         if(rampIsUp) {
-            super.gas(1);
+            super.gas(amount);
         }
         else {
             System.out.println("Cannot increase speed while ramp is down.");

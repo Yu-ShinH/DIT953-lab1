@@ -15,7 +15,7 @@ public class testLoad {
 
     @Before
     public void init() {
-        t = new Truck();
+        t = new Truck(10, 2000);
         car v = new Volvo240();
         t.lower();
         t.load(v);
