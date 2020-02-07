@@ -34,14 +34,15 @@ public class Saab95 extends car implements ITruckTransportable{
     /**
      * @return the current speed factor of the car.
      */
-    public double speedFactor(){
+    private double speedFactor(){
         double turbo = 1;
         if(turboOn) turbo = 1.3;
         return speedFactor(turbo);
     }
 
     /**
-     *
+     * Increases the speed of the Saab95 depending on the given amount and whether or not the turbo is turned on.
+     * The given amount has to be between 0 and 1.
      * @param amount
      */
     @Override
@@ -49,6 +50,11 @@ public class Saab95 extends car implements ITruckTransportable{
         gas(speedFactor(), amount);
     }
 
+    /**
+     * Decreases the speed of the car depending on the given amount and whether or not turbo is turned on.
+     * The given amount can only be between 0 and 1.
+     * @param amount specifies the amount with which to decrease the speed.
+     */
     @Override
     public void brake(double amount){
         brake(speedFactor(), amount);

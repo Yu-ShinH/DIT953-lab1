@@ -9,7 +9,6 @@ import java.util.List;
  */
 public class Garage <C extends car>{
     private int maxCars;
-
     private List<C> cars = new ArrayList<C>();
 
     /**
@@ -30,6 +29,9 @@ public class Garage <C extends car>{
        }
     }
 
+    /**
+     * @return the number of cars currently being stored.
+     */
     public int nCars() {
         return cars.size();
     }

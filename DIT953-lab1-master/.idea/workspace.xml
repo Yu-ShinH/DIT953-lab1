@@ -2,26 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/IFerryTransportable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ITruckTransportable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mover.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/testFerry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/testTransporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/testLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Movable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Movable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/testBreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/testBreak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Ferry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Ferry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMax.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMax.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testBreak.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testBreak.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ferry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ferry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Garage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Garage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IFerryTransportable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IFerryTransportable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ITruckTransportable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ITruckTransportable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scania.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Truck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volvo240.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/car.java" afterDir="false" />
     </list>
@@ -32,7 +27,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="149" />
+    <option name="myElementSize" value="146" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,6 +52,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -91,21 +87,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testGasScania.GasWRaisedFlatBed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testFerry.loadUnload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DIT953-lab1-master" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="testGasScania" />
-      <option name="METHOD_NAME" value="GasWRaisedFlatBed" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testLoad.testPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DIT953-lab1-master" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="testLoad" />
-      <option name="METHOD_NAME" value="testPosition" />
+      <option name="MAIN_CLASS_NAME" value="testFerry" />
+      <option name="METHOD_NAME" value="loadUnload" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,13 +107,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testTransporter.testMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DIT953-lab1-master" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="testTransporter" />
+      <option name="METHOD_NAME" value="testMax" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in DIT953-lab1-master" />
+        <item itemvalue="JUnit.testTransporter.testMax" />
+        <item itemvalue="JUnit.testFerry.loadUnload" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.testMax.testMax" />
-        <item itemvalue="JUnit.testLoad.testPosition" />
-        <item itemvalue="JUnit.testGasScania.GasWRaisedFlatBed" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +156,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testGasScania_GasWRaisedFlatBed.ic" NAME="testGasScania.GasWRaisedFlatBed Coverage Results" MODIFIED="1580906084812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testMove.ic" NAME="testMove Coverage Results" MODIFIED="1580482478866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/DIT953_lab1_master$All_in_DIT953_lab1_master.ic" NAME="All in DIT953-lab1-master Coverage Results" MODIFIED="1580906178649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DIT953_lab1_master$All_in_DIT953_lab1_master.ic" NAME="All in DIT953-lab1-master Coverage Results" MODIFIED="1581081774888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testGas.ic" NAME="testGas Coverage Results" MODIFIED="1580483855545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testMove_testMoveCircle.ic" NAME="testMove.testMoveCircle Coverage Results" MODIFIED="1580414747872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>

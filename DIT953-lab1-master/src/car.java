@@ -83,9 +83,18 @@ public abstract class car implements Movable, IFerryTransportable {
         return  mover.getY();
     }
 
+    /**
+     * Changes the x-coordinate of the car.
+     * @param x the new x-coordinate.
+     */
     public void setX(double x){
         mover.setX(x);
     }
+
+    /**
+     * Changes the y-coordinate of the car.
+     * @param y the new y-coordinate.
+     */
     public void setY(double y){
         mover.setY(y);
     }
@@ -236,6 +245,9 @@ public abstract class car implements Movable, IFerryTransportable {
         }
     }
 
+    /**
+     * @return a reference to the cars mover object.
+     */
     public Mover getMover() {
         return mover;
     }
