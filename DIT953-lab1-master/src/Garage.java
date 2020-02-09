@@ -30,6 +30,20 @@ public class Garage <C extends car>{
     }
 
     /**
+     * @param index specifies the car to remove from storage.
+     * @return the car with the given index.
+     */
+    public C removeCar(int index) {
+        if (cars.size() >= index) {
+            return cars.remove(index);
+        }
+        else {
+            System.out.println("Not enough cars in storage.");
+            return null;
+        }
+    }
+
+    /**
      * @return the number of cars currently being stored.
      */
     public int nCars() {

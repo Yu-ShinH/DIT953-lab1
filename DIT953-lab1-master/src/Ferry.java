@@ -54,7 +54,13 @@ public class Ferry implements Movable {
      * @return the unloaded car.
      */
     public IFerryTransportable unload() {
-        return transporter.unload();
+        if (transporter.getN() > 0) {
+            return transporter.unload();
+        }
+        else {
+            System.out.println("Storage is empty.");
+            return null;
+        }
     }
 
     /**
