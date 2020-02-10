@@ -44,11 +44,11 @@ public class Transporter<T extends Movable> {
     public int getN() {
         return storage.size();
     }
-    
+
     /**
      * @return one object storage.
      */
-    public T unload(int i){ return storage.get(i);}
+    public T unload(int i){ return storage.remove(i);}
 
     /**
      * Changes the xy-coordinates of the dependent object and all stored objects.

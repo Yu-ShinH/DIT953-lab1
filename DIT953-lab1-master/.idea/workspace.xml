@@ -3,15 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/Ferry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ferry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Garage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Garage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Ferry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Ferry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Transporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Transporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testTransporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testTransporter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Transporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Truck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Transporter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Truck.java" beforeDir="false" />
-=======
->>>>>>> 87ef8db7833bd3e9c5217ae0a796e201a438328c
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,10 +145,10 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DIT953_lab1_master$All_in_DIT953_lab1_master.ic" NAME="All in DIT953-lab1-master Coverage Results" MODIFIED="1581344409054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testGasScania_GasWRaisedFlatBed.ic" NAME="testGasScania.GasWRaisedFlatBed Coverage Results" MODIFIED="1580906084812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DIT953_lab1_master$All_in_DIT953_lab1_master.ic" NAME="All in DIT953-lab1-master Coverage Results" MODIFIED="1581344409054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DIT953_lab1_master$testMove.ic" NAME="testMove Coverage Results" MODIFIED="1580482478866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testGas.ic" NAME="testGas Coverage Results" MODIFIED="1580483855545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testMove_testMoveCircle.ic" NAME="testMove.testMoveCircle Coverage Results" MODIFIED="1580414747872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/DIT953_lab1_master$testMove.ic" NAME="testMove Coverage Results" MODIFIED="1580482478866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
