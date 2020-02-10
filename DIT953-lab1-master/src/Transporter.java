@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,19 +10,17 @@ import java.util.List;
  * @author Simon Genne
  */
 public class Transporter<T extends Movable> {
-    private List<T> storage;
+    private List<T> storage = new ArrayList<T>();
     private int max;
 
     private Mover mover;
 
     /**
      * Constructor for Transporter objects.
-     * @param storage a List used for storing the given objects.
      * @param max the max amount of objects that can be stored.
      * @param mover the same Mover object used by dependent class.
      */
-    public Transporter(List<T> storage, int max, Mover mover) {
-        this.storage = storage;
+    public Transporter(int max, Mover mover) {
         this.max = max;
         this.mover = mover;
     }

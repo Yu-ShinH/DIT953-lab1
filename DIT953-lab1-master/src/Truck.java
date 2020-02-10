@@ -18,7 +18,7 @@ public class Truck extends car{
      */
     public Truck(int maxCapacity, double maxWeight) {
         super(2, Color.red,100, "Truck", 15000);
-        transporter = new Transporter<>(new Stack<ITruckTransportable>(), maxCapacity, getMover());
+        transporter = new Transporter<ITruckTransportable>(maxCapacity, getMover());
         this.maxWeight = maxWeight;
     }
 

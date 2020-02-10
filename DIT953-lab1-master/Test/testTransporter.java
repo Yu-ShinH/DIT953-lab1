@@ -10,7 +10,7 @@ public class testTransporter {
 
     @Before
     public void init() {
-        t = new Transporter<>(new ArrayList<car>(), 2, new Mover());
+        t = new Transporter<>(2, new Mover());
     }
 
     @Test

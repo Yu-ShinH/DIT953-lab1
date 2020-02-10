@@ -21,7 +21,7 @@ public class Ferry implements Movable {
      * @param maxWeight the maximum weight that a
      */
     public Ferry(int maxCapacity, double enginePower, double maxWeight) {
-        transporter = new Transporter<>(new ArrayList<IFerryTransportable>(), maxCapacity, mover);
+        transporter = new Transporter<IFerryTransportable>( maxCapacity, mover);
         this.enginePower = enginePower;
         this.maxWeight = maxWeight;
     }

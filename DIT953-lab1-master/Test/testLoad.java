@@ -28,7 +28,7 @@ public class testLoad {
         t.move();
         t.brake(1);
         t.lower();
-        car c = t.unLoad();
+        car c = t.unload();
         double distance = c.distanceFrom(t);
         assertTrue(distance < 2);
     }
