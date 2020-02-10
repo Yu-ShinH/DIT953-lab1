@@ -34,7 +34,7 @@ public class Garage <C extends car>{
      * @return the car with the given index.
      */
     public C removeCar(int index) {
-        if (cars.size() >= index) {
+        if (cars.size() > index) {
             return cars.remove(index);
         }
         else {

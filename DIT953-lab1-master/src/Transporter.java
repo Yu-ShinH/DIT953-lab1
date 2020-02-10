@@ -40,18 +40,18 @@ public class Transporter<T extends Movable> {
     }
 
     /**
-     * @return one object storage.
-     */
-    public T unload() {
-            return storage.remove(0);
-    }
-
-    /**
      * @return the number of objects currently being stored.
      */
     public int getN() {
         return storage.size();
     }
+
+    public T getStorage(int i){ return storage.get(i);}
+
+    /**
+     * @return one object storage.
+     */
+    public T unload(int i){ return storage.get(i);}
 
     /**
      * Changes the xy-coordinates of the dependent object and all stored objects.

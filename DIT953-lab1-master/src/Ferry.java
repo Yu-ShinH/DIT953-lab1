@@ -55,7 +55,7 @@ public class Ferry implements Movable {
      */
     public IFerryTransportable unload() {
         if (transporter.getN() > 0) {
-            return transporter.unload();
+            return transporter.unload(0);
         }
         else {
             System.out.println("Storage is empty.");
