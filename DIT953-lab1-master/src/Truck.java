@@ -55,15 +55,28 @@ public class Truck extends car{
      * Unloads a single car from the truck.
      * Can only be done if the ramp is lowered and the truck is not already empty.
      */
-    public car unLoad(){
-        if(!rampIsUp && transporter.getN() > 0)
+    public car unload(){
+        if(readyToUnload())
         {
-            car c = (car) transporter.unload();
+            int i = transporter.getN() - 1;
+            car c = (car) transporter.getStorage(i);
             c.setX(getX()+1);
             c.setY(getY()+1);
             return c;
         }
         return null;
+    }
+
+    public boolean readyToUnload(){
+        if(rampIsUp){
+            System.out.println("Cannot unload while ramp is up");
+            return false;
+        }
+        if(transporter.getN() < 0 ) {
+            System.out.println("No cars to unload");
+            return false;
+        }
+        return true;
     }
 
     /**

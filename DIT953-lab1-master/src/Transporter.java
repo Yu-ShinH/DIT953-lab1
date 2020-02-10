@@ -53,6 +53,8 @@ public class Transporter<T extends Movable> {
         return storage.size();
     }
 
+    public T getStorage(int i){ return storage.get(i);}
+
     /**
      * Changes the xy-coordinates of the dependent object and all stored objects.
      */
