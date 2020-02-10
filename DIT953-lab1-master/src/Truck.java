@@ -59,7 +59,7 @@ public class Truck extends car{
         if(readyToUnload())
         {
             int i = transporter.getN() - 1;
-            car c = (car) transporter.getStorage(i);
+            car c = (car) transporter.unload(i);
             c.setX(getX()+1);
             c.setY(getY()+1);
             return c;

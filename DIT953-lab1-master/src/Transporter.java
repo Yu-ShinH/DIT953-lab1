@@ -44,10 +44,7 @@ public class Transporter<T extends Movable> {
     public int getN() {
         return storage.size();
     }
-
-    public T getStorage(int i){ return storage.get(i);}
-
-
+    
     /**
      * @return one object storage.
      */
