@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CarView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DrawPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pics/Saab95.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pics/Scania.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pics/Volvo240.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Ferry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Ferry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Transporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Transporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testTransporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testTransporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Truck.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,13 +40,16 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pics" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\GitHub\DIT953-lab1\DIT953-lab1-master\src\pics" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hua\Downloads\DIT953-lab1-master\DIT953-lab1-master\src" />
     </key>
@@ -62,7 +66,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in DIT953-lab1-master">
+  <component name="RunManager" selected="Application.CarController">
+    <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CarController" />
+      <module name="DIT953-lab1-master" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="DIT953-lab1-master" />
@@ -88,16 +99,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMax.testMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DIT953-lab1-master" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="testMax" />
-      <option name="METHOD_NAME" value="testMax" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="testTransporter.testMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DIT953-lab1-master" />
       <option name="PACKAGE_NAME" value="" />
@@ -110,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CarController" />
         <item itemvalue="JUnit.All in DIT953-lab1-master" />
         <item itemvalue="JUnit.testTransporter.testMax" />
         <item itemvalue="JUnit.testFerry.loadUnload" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.testMax.testMax" />
       </list>
     </recent_temporary>
   </component>

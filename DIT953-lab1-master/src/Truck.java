@@ -67,6 +67,10 @@ public class Truck extends car{
         return null;
     }
 
+    /**
+     * Checks if truck can unload.
+     * @return true if truck can unload, else false.
+     */
     public boolean readyToUnload(){
         if(rampIsUp){
             System.out.println("Cannot unload while ramp is up");
