@@ -54,12 +54,73 @@ public class CarController {
         }
     }
 
+    /*
+    public boolean checkCollision(int x) {
+        return (x < 0 || x + )
+    }
+
+     */
+
     // Calls the gas method for each car once
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (car c : cars
-                ) {
+        for (car c : cars) {
             c.gas(gas);
+        }
+    }
+
+    void brake(int amount) {
+        double brake = ((double) amount / 100);
+        for (car c : cars) {
+            c.brake(brake);
+        }
+    }
+
+    void turboOn() {
+        for (car c : cars) {
+            if (c instanceof Saab95){
+                Saab95 s = (Saab95) c;
+                s.setTurboOn();
+            }
+        }
+    }
+
+    void turboOff() {
+        for (car c : cars) {
+            if (c instanceof Saab95) {
+                Saab95 s = (Saab95) c;
+                s.setTurboOff();
+            }
+        }
+    }
+
+    void liftBed() {
+        for (car c : cars) {
+            if (c instanceof Scania) {
+                Scania s = (Scania) c;
+                s.raise(35);
+            }
+        }
+    }
+
+    void lowerBed() {
+        for (car c : cars) {
+            if (c instanceof Scania) {
+                Scania s = (Scania) c;
+                s.lower(35);
+            }
+        }
+    }
+
+    void startAll() {
+        for (car c : cars) {
+            c.startEngine();
+        }
+    }
+
+    void stopAll() {
+        for (car c : cars) {
+            c.stopEngine();
         }
     }
 }

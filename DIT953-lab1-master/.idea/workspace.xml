@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CarView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pics/Saab95.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pics/Scania.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pics/Volvo240.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
