@@ -13,8 +13,8 @@ import java.awt.event.ActionListener;
  **/
 
 public class CarView extends JFrame{
-    private static final int X = 700;
-    private static final int Y = 700;
+    private static final int X = 700; //800
+    private static final int Y = 700; //800
 
     public int getMaxX() {
         return X;

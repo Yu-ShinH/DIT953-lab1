@@ -63,7 +63,7 @@ public class Scania extends car {
     @Override
     public void gas(double amount) {
         if (flatbed == 0) {
-            super.gas(1);
+            super.gas(amount);
         }
         else {
             System.out.println("Cannot increase speed while flatbed is raised.");

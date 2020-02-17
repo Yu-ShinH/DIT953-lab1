@@ -4,20 +4,29 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 // This panel represent the animated part of the view with the car images.
 
 public class DrawPanel extends JPanel{
 
     // Just a single image, TODO: Generalize
-    BufferedImage volvoImage;
+    List<BufferedImage> images = new ArrayList<>();
     // To keep track of a singel cars position
-    Point volvoPoint = new Point();
+    List<Point> points = new ArrayList<>();
 
     // TODO: Make this genereal for all cars
-    void moveit(int x, int y){
-        volvoPoint.x = x;
-        volvoPoint.y = y;
+    void moveit(int index, int x, int y){
+        Point tmpPoint = points.get(index);
+        tmpPoint.x = x;
+        tmpPoint.y = y;
+    }
+
+    private void initPoints() {
+        for (int i = 0; i < 3; i++) {
+            points.add(new Point());
+        }
     }
 
     // Initializes the panel and reads the images
@@ -25,6 +34,7 @@ public class DrawPanel extends JPanel{
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
+        initPoints();
         // Print an error message in case file is not found with a try/catch block
         try {
             // You can remove the "pics" part if running outside of IntelliJ and
@@ -33,7 +43,9 @@ public class DrawPanel extends JPanel{
 
             // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
             // if you are starting in IntelliJ.
-            volvoImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
+            images.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg")));
+            images.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg")));
+            images.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Scania.jpg")));
         } catch (IOException ex)
         {
             ex.printStackTrace();
@@ -46,6 +58,10 @@ public class DrawPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(volvoImage, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
+        for (int i = 0; i < images.size(); i++) {
+            BufferedImage tmpImage = images.get(i);
+            Point tmpPoint = points.get(i);
+            g.drawImage(tmpImage, tmpPoint.x, tmpPoint.y, null); // see javadoc for more info on the parameters
+        }
     }
 }

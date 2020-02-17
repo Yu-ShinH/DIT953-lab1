@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.List;
 
 /*
 * This class represents the Controller part in the MVC pattern.
@@ -30,6 +31,10 @@ public class CarController {
         CarController cc = new CarController();
 
         cc.cars.add(new Volvo240());
+        cc.cars.add(new Saab95());
+        cc.cars.add(new Scania());
+
+        initCars(cc.cars);
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
@@ -38,16 +43,25 @@ public class CarController {
         cc.timer.start();
     }
 
+    private static void initCars(List<car> list) {
+        for (int i = 0; i < list.size(); i++) {
+            car c = list.get(i);
+            c.setY(i * 100);
+        }
+    }
+
+
     /* Each step the TimerListener moves all the cars in the list and tells the
     * view to update its images. Change this method to your needs.
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (car c : cars) {
+            for (int i = 0; i < cars.size(); i++) {
+                car c = cars.get(i);
                 c.move();
                 int x = (int) Math.round(c.getX());
                 int y = (int) Math.round(c.getY());
-                frame.drawPanel.moveit(x, y);
+                frame.drawPanel.moveit(i, x, y);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
             }
@@ -66,6 +80,7 @@ public class CarController {
         double gas = ((double) amount) / 100;
         for (car c : cars) {
             c.gas(gas);
+            System.out.println(c.getCurrentSpeed());
         }
     }
 
@@ -81,6 +96,8 @@ public class CarController {
             if (c instanceof Saab95){
                 Saab95 s = (Saab95) c;
                 s.setTurboOn();
+                System.out.println("turbo " + s.isTurboOn());
+                System.out.println("speed: " + s.getCurrentSpeed());
             }
         }
     }

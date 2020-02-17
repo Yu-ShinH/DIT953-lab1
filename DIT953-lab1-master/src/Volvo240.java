@@ -20,7 +20,9 @@ public class Volvo240 extends car implements ITruckTransportable{
      * @return the current speed factor of the car.
      */
     private double speedFactor(){
-        return speedFactor(trimFactor);
+        double sf = speedFactor(trimFactor);
+        System.out.println(sf);
+        return sf;
     }
 
     /**
