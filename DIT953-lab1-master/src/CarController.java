@@ -59,8 +59,14 @@ public class CarController {
             for (int i = 0; i < cars.size(); i++) {
                 car c = cars.get(i);
                 c.move();
+
+                //change direction if car hits a wall
+                if (c.getX() >= frame.getMaxX()) c.setDirection(Math.PI);
+                if (c.getX() <= 0) c.setDirection(0);
+
                 int x = (int) Math.round(c.getX());
                 int y = (int) Math.round(c.getY());
+
                 frame.drawPanel.moveit(i, x, y);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
@@ -68,19 +74,13 @@ public class CarController {
         }
     }
 
-    /*
-    public boolean checkCollision(int x) {
-        return (x < 0 || x + )
-    }
-
-     */
-
     // Calls the gas method for each car once
     void gas(int amount) {
         double gas = ((double) amount) / 100;
         for (car c : cars) {
             c.gas(gas);
             System.out.println(c.getCurrentSpeed());
+            //System.out.println("the direction is " + c.getDirection());
         }
     }
 
