@@ -2,43 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarController$TimerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/DrawPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Ferry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Ferry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Garage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/IFerryTransportable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/IFerryTransportable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/ITruckTransportable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/ITruckTransportable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Movable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Movable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Mover.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Mover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Scania.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Transporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Transporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Truck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testBreak.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testBreak.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testFerry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testFerry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testGas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testGas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testGasScania.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testGasScania.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testLoad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMax.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMax.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testTransporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testTransporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testTurn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/DIT953-lab1-master/testTurn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UML/20200224_160644.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UML/20200224_160656.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
