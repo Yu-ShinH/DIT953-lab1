@@ -61,7 +61,7 @@ public class CarController {
                 c.move();
 
                 //change direction if car hits a wall
-                if (c.getX() >= frame.getMaxX()) c.setDirection(Math.PI);
+                if (c.getX() + 100 >= frame.getMaxX()) c.setDirection(Math.PI);
                 if (c.getX() <= 0) c.setDirection(0);
 
                 int x = (int) Math.round(c.getX());
@@ -79,8 +79,6 @@ public class CarController {
         double gas = ((double) amount) / 100;
         for (car c : cars) {
             c.gas(gas);
-            System.out.println(c.getCurrentSpeed());
-            //System.out.println("the direction is " + c.getDirection());
         }
     }
 
@@ -96,8 +94,6 @@ public class CarController {
             if (c instanceof Saab95){
                 Saab95 s = (Saab95) c;
                 s.setTurboOn();
-                System.out.println("turbo " + s.isTurboOn());
-                System.out.println("speed: " + s.getCurrentSpeed());
             }
         }
     }
