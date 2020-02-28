@@ -13,17 +13,14 @@ import java.awt.event.ActionListener;
  **/
 
 public class CarView extends JFrame{
-    private static final int X = 700; //800
-    private static final int Y = 700; //800
+    private int X;
+    private int Y;
 
-    public int getMaxX() {
-        return X;
-    }
 
     // The controller member
     CarController carC;
 
-    DrawPanel drawPanel = new DrawPanel(X, Y-240);
+    DrawPanel drawPanel;
 
     JPanel controlPanel = new JPanel();
 
@@ -43,9 +40,13 @@ public class CarView extends JFrame{
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public CarView(String framename, CarController cc){
+    public CarView(String framename, CarController cc, DrawPanel panel, int X, int Y){
         this.carC = cc;
+        drawPanel = panel;
+        this.X = X;
+        this.Y = Y;
         initComponents(framename);
+
     }
 
     // Sets everything in place and fits everything

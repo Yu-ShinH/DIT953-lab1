@@ -11,45 +11,14 @@ import java.util.List;
 
 public class DrawPanel extends JPanel{
 
-    // Just a single image, TODO: Generalize
-    List<BufferedImage> images = new ArrayList<>();
-    // To keep track of a singel cars position
-    List<Point> points = new ArrayList<>();
-
-    // TODO: Make this genereal for all cars
-    void moveit(int index, int x, int y){
-        Point tmpPoint = points.get(index);
-        tmpPoint.x = x;
-        tmpPoint.y = y;
-    }
-
-    private void initPoints() {
-        for (int i = 0; i < 3; i++) {
-            points.add(new Point());
-        }
-    }
+    List<DrawableCar> cars;
 
     // Initializes the panel and reads the images
-    public DrawPanel(int x, int y) {
+    public DrawPanel(int x, int y, List<DrawableCar> cars) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
-        initPoints();
-        // Print an error message in case file is not found with a try/catch block
-        try {
-            // You can remove the "pics" part if running outside of IntelliJ and
-            // everything is in the same main folder.
-            // volvoImage = ImageIO.read(new File("Volvo240.jpg"));
-
-            // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
-            // if you are starting in IntelliJ.
-            images.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg")));
-            images.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg")));
-            images.add(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Scania.jpg")));
-        } catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
+        this.cars = cars;
 
     }
 
@@ -57,11 +26,32 @@ public class DrawPanel extends JPanel{
     // TODO: Change to suit your needs.
     @Override
     protected void paintComponent(Graphics g) {
+        List<BufferedImage> images = getImages();
+        List<Point> points = getPoints();
         super.paintComponent(g);
         for (int i = 0; i < images.size(); i++) {
             BufferedImage tmpImage = images.get(i);
             Point tmpPoint = points.get(i);
             g.drawImage(tmpImage, tmpPoint.x, tmpPoint.y, null); // see javadoc for more info on the parameters
         }
+    }
+
+    private List<BufferedImage> getImages() {
+        List<BufferedImage> images = new ArrayList<>();
+        for (DrawableCar c : cars) {
+            images.add(c.getImage());
+        }
+        return images;
+    }
+
+    private List<Point> getPoints() {
+        List<Point> points = new ArrayList<>();
+        for (DrawableCar c : cars) {
+            car car = c.getCar();
+            int x = (int) car.getX();
+            int y = (int) car.getY();
+            points.add(new Point(x, y));
+        }
+        return points;
     }
 }

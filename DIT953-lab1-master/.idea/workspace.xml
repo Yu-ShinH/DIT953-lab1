@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UML/20200224_160644.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UML/20200224_160656.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CarModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DrawableCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TimeKeeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawPanel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +32,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1WksuCytejB67yfeczIgCKyox42" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -59,9 +68,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CarController">
-    <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CarController" />
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Application" />
+      <module name="DIT953-lab1-master" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CarModel" />
       <module name="DIT953-lab1-master" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -82,16 +98,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testFerry.loadUnload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DIT953-lab1-master" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="testFerry" />
-      <option name="METHOD_NAME" value="loadUnload" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="testTransporter.testMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DIT953-lab1-master" />
       <option name="PACKAGE_NAME" value="" />
@@ -104,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CarController" />
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.CarModel" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in DIT953-lab1-master" />
         <item itemvalue="JUnit.testTransporter.testMax" />
-        <item itemvalue="JUnit.testFerry.loadUnload" />
       </list>
     </recent_temporary>
   </component>
@@ -137,6 +143,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DIT953_lab1_master$testGasScania_GasWRaisedFlatBed.ic" NAME="testGasScania.GasWRaisedFlatBed Coverage Results" MODIFIED="1580906084812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
