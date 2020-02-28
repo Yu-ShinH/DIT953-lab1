@@ -2,14 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f92786b2-c013-4098-bc44-f5dda34a55e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CarModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DrawableCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TimeKeeper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ObserveTimeKeeper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarController$TimerListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/CarView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/DrawPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Saab95.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/TimeKeeper$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/TimeKeeper$TimerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/TimeKeeper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/TimeKeeper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DIT953-lab1-master/Volvo240.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CarModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimeKeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimeKeeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Volvo240.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>

@@ -38,7 +38,6 @@ public class Saab95 extends car implements ITruckTransportable{
         double turbo = 1;
         if(turboOn) turbo = 1.3;
         double sf = speedFactor(turbo);
-        System.out.println(sf);
         return sf;
     }
 

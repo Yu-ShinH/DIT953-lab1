@@ -10,7 +10,7 @@ import java.util.List;
 * modifying the model state and the updating the view.
  */
 
-public class CarModel {
+public class CarModel implements ObserveTimeKeeper {
     // member fields:
 
     // The frame that represents this instance View of the MVC pattern
@@ -23,6 +23,7 @@ public class CarModel {
     public CarModel(List<DrawableCar> drawableCars) {
         this.drawableCars = drawableCars;
         cars = getCars();
+        initCars();
     }
 
     private List<car> getCars() {
@@ -33,9 +34,9 @@ public class CarModel {
         return cars;
     }
 
-    private static void initCars(List<car> list) {
-        for (int i = 0; i < list.size(); i++) {
-            car c = list.get(i);
+    private void initCars() {
+        for (int i = 0; i < cars.size(); i++) {
+            car c = cars.get(i);
             c.setY(i * 100);
         }
     }
@@ -64,10 +65,18 @@ public class CarModel {
 
     */
 
+    public void addCar(DrawableCar dc) {
+        if (drawableCars.size() < 10) {
+            drawableCars.add(dc);
+            cars = getCars();
+        }
+        initCars();
+    }
 
-    public void updateCars() {
-        for (car c : cars) {
-            c.move();
+    public void removeCar() {
+        if (!drawableCars.isEmpty()) {
+            drawableCars.remove(drawableCars.size() - 1);
+            cars = getCars();
         }
     }
 
@@ -131,6 +140,13 @@ public class CarModel {
     void stopAll() {
         for (car c : cars) {
             c.stopEngine();
+        }
+    }
+
+    @Override
+    public void update() {
+        for (car c : cars) {
+            c.move();
         }
     }
 }

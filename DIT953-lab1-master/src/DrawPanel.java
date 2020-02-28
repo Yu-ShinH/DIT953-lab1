@@ -9,7 +9,7 @@ import java.util.List;
 
 // This panel represent the animated part of the view with the car images.
 
-public class DrawPanel extends JPanel{
+public class DrawPanel extends JPanel implements ObserveTimeKeeper{
 
     List<DrawableCar> cars;
 
@@ -53,5 +53,10 @@ public class DrawPanel extends JPanel{
             points.add(new Point(x, y));
         }
         return points;
+    }
+
+    @Override
+    public void update() {
+        repaint();
     }
 }

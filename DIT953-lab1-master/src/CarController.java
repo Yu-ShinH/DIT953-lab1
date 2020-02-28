@@ -37,5 +37,14 @@ public class CarController {
         model.stopAll();
     }
 
+    public void addCar(DrawableCar dc) {
+        model.addCar(dc);
+    }
+
+    public void removeCar() {
+        model.removeCar();
+    }
+
+
 
 }

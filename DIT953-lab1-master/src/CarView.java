@@ -1,9 +1,11 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 /**
  * This class represents the full view of the MVC pattern of your car simulator.
@@ -39,6 +41,9 @@ public class CarView extends JFrame{
     JButton startButton = new JButton("Start all cars");
     JButton stopButton = new JButton("Stop all cars");
 
+    JButton addCar = new JButton("Add car");
+    JButton removeCar = new JButton("Remove car");
+
     // Constructor
     public CarView(String framename, CarController cc, DrawPanel panel, int X, int Y){
         this.carC = cc;
@@ -46,7 +51,6 @@ public class CarView extends JFrame{
         this.X = X;
         this.Y = Y;
         initComponents(framename);
-
     }
 
     // Sets everything in place and fits everything
@@ -87,6 +91,8 @@ public class CarView extends JFrame{
         controlPanel.add(brakeButton, 3);
         controlPanel.add(turboOffButton, 4);
         controlPanel.add(lowerBedButton, 5);
+        controlPanel.add(addCar, 6);
+        controlPanel.add(removeCar, 7);
         controlPanel.setPreferredSize(new Dimension((X/2)+4, 200));
         this.add(controlPanel);
         controlPanel.setBackground(Color.CYAN);
@@ -157,6 +163,24 @@ public class CarView extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 carC.stopAll();
+            }
+        });
+
+        addCar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    carC.addCar(new DrawableCar(new Volvo240(), ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"))));
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
+        removeCar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                carC.removeCar();
             }
         });
 

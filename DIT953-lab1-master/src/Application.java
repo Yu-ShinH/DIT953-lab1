@@ -17,7 +17,10 @@ public class Application {
         DrawPanel dp = new DrawPanel(X, Y - 240, drawableCars);
         CarView cv = new CarView("CarSim 1.0", cc, dp, X, Y);
 
-        TimeKeeper timer = new TimeKeeper(cm, dp);
+        TimeKeeper timer = new TimeKeeper();
+        timer.addObserver(cm);
+        timer.addObserver(dp);
+        timer.startTimer();
 
 
         /*

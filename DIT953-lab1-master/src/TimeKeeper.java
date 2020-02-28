@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TimeKeeper {
     // The delay (ms) corresponds to 20 updates a sec (hz)
@@ -9,21 +11,21 @@ public class TimeKeeper {
     // each step between delays.
     private Timer timer = new Timer(delay, new TimerListener());
 
-    CarModel model;
-    DrawPanel panel;
+    List<ObserveTimeKeeper> observers = new ArrayList<>();
 
+    public void addObserver(ObserveTimeKeeper observer) {
+        observers.add(observer);
+    }
 
-    public TimeKeeper(CarModel model, DrawPanel panel) {
-        this.model = model;
-        this.panel = panel;
-
+    public void startTimer() {
         timer.start();
     }
 
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            model.updateCars();
-            panel.repaint();
+            for (ObserveTimeKeeper o : observers) {
+                o.update();
+            }
         }
     }
 }
