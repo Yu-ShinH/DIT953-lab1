@@ -12,7 +12,7 @@ public class Application {
     public static void main(String[] args) {
         List<DrawableCar> drawableCars = createList();
 
-        CarModel cm = new CarModel(drawableCars);
+        CarModel cm = new CarModel(drawableCars, X, Y);
         CarController cc = new CarController(cm);
         DrawPanel dp = new DrawPanel(X, Y - 240, drawableCars);
         CarView cv = new CarView("CarSim 1.0", cc, dp, X, Y);
@@ -22,26 +22,6 @@ public class Application {
         timer.addObserver(dp);
         timer.startTimer();
 
-
-        /*
-        List<DrawableCar> cars = new ArrayList<>();
-
-
-        DrawPanel panel = new DrawPanel(X, Y - 240, cars);
-        CarModel cm = new CarModel(new CarView("CarSim 1.0", new CarController()));
-
-        cm.cars.add(new Volvo240());
-        cm.cars.add(new Saab95());
-        cm.cars.add(new Scania());
-
-        // Start a new view and send a reference of self
-        cm.frame = new CarView("CarSim 1.0", new CarController(cm), panel, X, Y);
-
-
-        // Start the timer
-        cm.startTimer();
-
-         */
     }
 
     private static List<DrawableCar> createList() {

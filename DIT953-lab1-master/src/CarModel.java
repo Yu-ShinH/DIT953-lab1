@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /*
 * This class represents the Controller part in the MVC pattern.
 * It's responsibilities is to listen to the View and responds in a appropriate manner by
@@ -12,18 +13,20 @@ import java.util.List;
 
 public class CarModel implements ObserveTimeKeeper {
     // member fields:
-
-    // The frame that represents this instance View of the MVC pattern
-    // A list of cars, modify if needed
     private List<DrawableCar> drawableCars;
     private List<car> cars;
 
+    private int X;
+    private int Y;
+
     //methods:
 
-    public CarModel(List<DrawableCar> drawableCars) {
+    public CarModel(List<DrawableCar> drawableCars, int X, int Y) {
         this.drawableCars = drawableCars;
         cars = getCars();
         initCars();
+        this.X = X;
+        this.Y = Y;
     }
 
     private List<car> getCars() {
@@ -40,30 +43,6 @@ public class CarModel implements ObserveTimeKeeper {
             c.setY(i * 100);
         }
     }
-
-
-
-    /*
-    private class TimerListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            for (int i = 0; i < cars.size(); i++) {
-
-                car c = cars.get(i);
-                c.move();
-
-                int x = (int) Math.round(c.getX());
-                int y = (int) Math.round(c.getY());
-
-                // repaint() calls the paintComponent method of the panel
-                frame.drawPanel.repaint();
-
-
-
-            }
-        }
-    }
-
-    */
 
     public void addCar(DrawableCar dc) {
         if (drawableCars.size() < 10) {
@@ -145,8 +124,34 @@ public class CarModel implements ObserveTimeKeeper {
 
     @Override
     public void update() {
-        for (car c : cars) {
-            c.move();
+        for (DrawableCar dc : drawableCars) {
+            adjustDirection(dc);
+            dc.getCar().move();
         }
     }
+
+    private boolean checkCollision(DrawableCar drawable) {
+        int width = drawable.getImage().getWidth();
+        double xCoordinate = drawable.getCar().getX();
+
+        if (xCoordinate + width >= X) {
+            return true;
+        }
+
+        if (xCoordinate <= 0) {
+            return true;
+
+        }
+        return false;
+    }
+
+    private void adjustDirection(DrawableCar drawable) {
+        if (checkCollision(drawable)) {
+            double currentDirection = drawable.getCar().getDirection();
+            double newDirection = currentDirection + Math.PI;
+            drawable.getCar().setDirection(newDirection);
+        }
+    }
+
+
 }
