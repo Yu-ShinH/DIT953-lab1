@@ -45,17 +45,28 @@ public class CarModel implements ObserveTimeKeeper {
     }
 
     public void addCar(DrawableCar dc) {
-        if (drawableCars.size() < 10) {
+
+        try {
+            if (drawableCars.size() >= 10) {
+                throw new IllegalStateException();
+            }
             drawableCars.add(dc);
             cars = getCars();
+        } catch (IllegalStateException e) {
+            System.out.println("List of cars is full.");
         }
         initCars();
     }
 
     public void removeCar() {
-        if (!drawableCars.isEmpty()) {
+
+        try {
+            if (drawableCars.isEmpty()) {
+                throw new IllegalStateException();
+            }
             drawableCars.remove(drawableCars.size() - 1);
-            cars = getCars();
+        } catch (IllegalStateException e) {
+            System.out.println("List of cars is empty.");
         }
     }
 

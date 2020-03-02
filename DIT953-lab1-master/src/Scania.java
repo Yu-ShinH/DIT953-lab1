@@ -15,6 +15,12 @@ public class Scania extends car {
         super(2,Color.red,100, "Scania", 15000);
     }
 
+    public void startEngine() {
+        if (flatbed == 0) {
+            super.startEngine();
+        }
+    }
+
     /**
      * Raises flatbed with a certain angle.
      * The flatbed cannot be above 70 degrees.
